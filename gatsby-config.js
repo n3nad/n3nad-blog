@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `n3nad.com`,
     author: `Nenad Mitrovic`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Nenad Mitrovic's blog`,
     siteUrl: `https://n3nad.com/`,
     social: {
       twitter: `i_am_n3nad`,

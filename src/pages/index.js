@@ -2,10 +2,11 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Bio from '../components/bio'
-import Layout from '../components/layout'
+// import Bio from '../components/bio'
+import Layout from '../styleguide/global/Layout'
+import Title from '../styleguide/components/title/Title'
 import SEO from '../components/seo'
-import { rhythm } from '../utils/typography'
+// import { rhythm } from '../styleguide'
 
 class BlogIndex extends React.Component {
   render() {
@@ -16,34 +17,35 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.title
-          return (
-            <article key={node.slug}>
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                    fontFamily: `Abril Fatface, serif`,
-                    fontSize: '32px',
-                  }}>
-                  <Link style={{ boxShadow: `none` }} to={node.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          )
-        })}
+        <Title>n3nad.com</Title>
+        {/*<Bio />*/}
+        {/*{posts.map(({ node }) => {*/}
+        {/*const title = node.title*/}
+        {/*return (*/}
+        {/*<article key={node.slug}>*/}
+        {/*<header>*/}
+        {/*<h3*/}
+        {/*style={{*/}
+        {/*marginBottom: rhythm(1 / 4),*/}
+        {/*fontFamily: `Abril Fatface, serif`,*/}
+        {/*fontSize: '32px',*/}
+        {/*}}>*/}
+        {/*<Link style={{ boxShadow: `none` }} to={node.slug}>*/}
+        {/*{title}*/}
+        {/*</Link>*/}
+        {/*</h3>*/}
+        {/*<small>{node.date}</small>*/}
+        {/*</header>*/}
+        {/*<section>*/}
+        {/*<p*/}
+        {/*dangerouslySetInnerHTML={{*/}
+        {/*__html: node.excerpt,*/}
+        {/*}}*/}
+        {/*/>*/}
+        {/*</section>*/}
+        {/*</article>*/}
+        {/*)*/}
+        {/*})}*/}
       </Layout>
     )
   }
