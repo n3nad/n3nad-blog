@@ -2,7 +2,7 @@ import React from 'react'
 
 import { rhythm } from './typography'
 
-function Layout() {
+function Layout({ children }) {
   return (
     <div
       style={{
@@ -11,7 +11,7 @@ function Layout() {
         maxWidth: rhythm(24),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}>
-      <main>{this.props.children}</main>
+      <main>{children}</main>
     </div>
   )
 }
