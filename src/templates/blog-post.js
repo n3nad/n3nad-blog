@@ -2,20 +2,22 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Bio from '../components/bio'
-import Layout from '../components/layout'
+import Layout from '../styleguide/global/Layout'
+import Title from '../styleguide/components/title/Title'
 import SEO from '../components/seo'
-import { rhythm, scale } from '../utils/typography'
+import Bio from '../components/bio'
+import { rhythm, scale } from '../styleguide/global/typography'
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.wordpressPage
+    const post = this.props.data.wordpressPost
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.title} description={post.excerpt} />
+        <Title size="small">{siteTitle}</Title>
         <article>
           <header>
             <h1
@@ -89,7 +91,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    wordpressPage(slug: { eq: $slug }) {
+    wordpressPost(slug: { eq: $slug }) {
       id
       title
       date(formatString: "MMMM DD, YYYY")

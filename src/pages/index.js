@@ -12,7 +12,7 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allWordpressPage.edges
+    const posts = data.allWordpressPost.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -60,7 +60,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allWordpressPage(sort: { fields: date, order: DESC }) {
+    allWordpressPost(sort: { fields: date, order: DESC }) {
       edges {
         node {
           title
