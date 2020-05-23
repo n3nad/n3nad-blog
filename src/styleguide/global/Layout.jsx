@@ -1,5 +1,8 @@
 import React from 'react'
 
+import 'typeface-lato'
+import 'typeface-abril-fatface'
+
 import { rhythm } from './typography'
 
 function Layout({ children }) {
