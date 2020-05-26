@@ -21,6 +21,11 @@ const typography = new Typography({
     overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
       h1: {
         fontFamily: ['Abril Fatface', 'sans-serif'].join(','),
+        color: '#000',
+      },
+      body: {
+        fontSize: '18px',
+        color: '#333',
       },
       blockquote: {
         ...scale(1 / 5),
